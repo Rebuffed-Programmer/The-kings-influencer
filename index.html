@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Influenciador The Kings</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background-image:url('https://i.postimg.cc/j57cJvG6/13DE1ED8-A490-486C-A292-31EA304E74E7.png');
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+height:100vh;
+display:flex;
+align-items:flex-end;
+justify-content:center;
+}
+
+.botao{
+margin-bottom:40px;
+}
+
+button{
+background:#ff9f1c;
+border:none;
+padding:16px 40px;
+font-size:20px;
+color:white;
+border-radius:12px;
+cursor:pointer;
+}
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+display:none;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+}
+
+.popup h2{
+color:white;
+margin-bottom:20px;
+}
+
+.qr{
+width:250px;
+margin-bottom:30px;
+border-radius:10px;
+}
+
+.links a{
+display:block;
+background:#ff9f1c;
+color:white;
+padding:15px;
+margin:10px;
+text-decoration:none;
+border-radius:10px;
+font-size:18px;
+}
+
+.fechar{
+position:absolute;
+top:20px;
+right:20px;
+font-size:30px;
+color:white;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="botao">
+<button onclick="abrir()">Continuar →</button>
+</div>
+
+<div class="popup" id="popup">
+
+<div class="fechar" onclick="fechar()">✕</div>
+
+<h2>Entre em contato com a The Kings</h2>
+
+<img class="qr" src="https://i.postimg.cc/8cLvT0xt/Whats-App.jpg">
+
+<div class="links">
+<a href="https://wa.me/" target="_blank">Abrir WhatsApp</a>
+
+<a href="https://www.instagram.com/the_kings_acai?igsh=MWNydGxwdzg0eHk1Mw==" target="_blank">
+Abrir Instagram da Loja
+</a>
+</div>
+
+</div>
+
+<script>
+
+function abrir(){
+document.getElementById("popup").style.display="flex";
+}
+
+function fechar(){
+document.getElementById("popup").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
