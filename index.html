@@ -3,36 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Influenciador The Kings</title>
+<title>The Kings Influenciadores</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background-image:url('https://i.postimg.cc/j57cJvG6/13DE1ED8-A490-486C-A292-31EA304E74E7.png');
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-height:100vh;
+background:#000;
 display:flex;
-align-items:flex-end;
 justify-content:center;
 }
 
-.botao{
-margin-bottom:40px;
+.container{
+position:relative;
+width:100%;
+max-width:420px;
 }
 
-button{
-background:#ff9f1c;
+.container img{
+width:100%;
+display:block;
+}
+
+/* BOTÃO CONTINUAR */
+
+.continuar{
+position:absolute;
+bottom:7%;
+left:50%;
+transform:translateX(-50%);
+width:70%;
+height:55px;
+background:transparent;
 border:none;
-padding:16px 40px;
-font-size:20px;
-color:white;
-border-radius:12px;
 cursor:pointer;
 }
+
+/* POPUP */
 
 .popup{
 position:fixed;
@@ -40,43 +47,38 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.85);
+background:rgba(0,0,0,0.9);
 display:none;
-align-items:center;
-justify-content:center;
 flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
+color:white;
 padding:20px;
 }
 
-.popup h2{
-color:white;
-margin-bottom:20px;
-}
-
 .qr{
-width:250px;
-margin-bottom:30px;
+width:240px;
+margin:20px;
 border-radius:10px;
 }
 
-.links a{
-display:block;
+.botao{
 background:#ff9f1c;
-color:white;
-padding:15px;
+padding:14px 25px;
 margin:10px;
-text-decoration:none;
 border-radius:10px;
+color:white;
+text-decoration:none;
 font-size:18px;
+display:inline-block;
 }
 
 .fechar{
 position:absolute;
 top:20px;
-right:20px;
+right:25px;
 font-size:30px;
-color:white;
 cursor:pointer;
 }
 
@@ -85,36 +87,41 @@ cursor:pointer;
 
 <body>
 
-<div class="botao">
-<button onclick="abrir()">Continuar →</button>
+<div class="container">
+
+<img src="https://i.postimg.cc/j57cJvG6/13DE1ED8-A490-486C-A292-31EA304E74E7.png">
+
+<button class="continuar" onclick="abrir()"></button>
+
 </div>
+
 
 <div class="popup" id="popup">
 
 <div class="fechar" onclick="fechar()">✕</div>
 
-<h2>Entre em contato com a The Kings</h2>
+<h2>Fale com a The Kings 👑</h2>
+
+<p>Escaneie o QR Code ou entre em contato:</p>
 
 <img class="qr" src="https://i.postimg.cc/8cLvT0xt/Whats-App.jpg">
 
-<div class="links">
-<a href="https://wa.me/" target="_blank">Abrir WhatsApp</a>
+<a class="botao" href="https://wa.me/" target="_blank">Abrir WhatsApp</a>
 
-<a href="https://www.instagram.com/the_kings_acai?igsh=MWNydGxwdzg0eHk1Mw==" target="_blank">
-Abrir Instagram da Loja
+<a class="botao" href="https://www.instagram.com/the_kings_acai?igsh=MWNydGxwdzg0eHk1Mw==" target="_blank">
+Ir para Instagram
 </a>
-</div>
 
 </div>
 
 <script>
 
 function abrir(){
-document.getElementById("popup").style.display="flex";
+document.getElementById("popup").style.display="flex"
 }
 
 function fechar(){
-document.getElementById("popup").style.display="none";
+document.getElementById("popup").style.display="none"
 }
 
 </script>
